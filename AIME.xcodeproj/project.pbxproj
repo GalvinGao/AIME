@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B556DB0529B6E2C700B3DD1A /* LDSwiftEventSource in Frameworks */ = {isa = PBXBuildFile; productRef = B556DB0429B6E2C700B3DD1A /* LDSwiftEventSource */; };
 		B5925E3829B6C3A9002CBC56 /* AIMEApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5925E3729B6C3A9002CBC56 /* AIMEApp.swift */; };
 		B5925E3A29B6C3A9002CBC56 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5925E3929B6C3A9002CBC56 /* ContentView.swift */; };
 		B5925E3C29B6C3AA002CBC56 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B5925E3B29B6C3AA002CBC56 /* Assets.xcassets */; };
@@ -16,6 +17,9 @@
 		B5925E4E29B6C3AA002CBC56 /* AIMETests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5925E4D29B6C3AA002CBC56 /* AIMETests.swift */; };
 		B5925E5829B6C3AA002CBC56 /* AIMEUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5925E5729B6C3AA002CBC56 /* AIMEUITests.swift */; };
 		B5925E5A29B6C3AB002CBC56 /* AIMEUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5925E5929B6C3AA002CBC56 /* AIMEUITestsLaunchTests.swift */; };
+		B5925E6D29B6C3C8002CBC56 /* KeyboardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5925E6C29B6C3C8002CBC56 /* KeyboardViewController.swift */; };
+		B5925E7129B6C3C8002CBC56 /* AIMEKeyboard.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = B5925E6A29B6C3C8002CBC56 /* AIMEKeyboard.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		B5925E7A29B6CAB9002CBC56 /* OpenAICompletion.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5925E7929B6CAB9002CBC56 /* OpenAICompletion.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -33,7 +37,28 @@
 			remoteGlobalIDString = B5925E3329B6C3A9002CBC56;
 			remoteInfo = AIME;
 		};
+		B5925E6F29B6C3C8002CBC56 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = B5925E2C29B6C3A9002CBC56 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = B5925E6929B6C3C8002CBC56;
+			remoteInfo = AIMEKeyboard;
+		};
 /* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		B5925E7529B6C3C8002CBC56 /* Embed Foundation Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				B5925E7129B6C3C8002CBC56 /* AIMEKeyboard.appex in Embed Foundation Extensions */,
+			);
+			name = "Embed Foundation Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		B5925E3429B6C3A9002CBC56 /* AIME.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AIME.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -48,6 +73,10 @@
 		B5925E5329B6C3AA002CBC56 /* AIMEUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AIMEUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		B5925E5729B6C3AA002CBC56 /* AIMEUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AIMEUITests.swift; sourceTree = "<group>"; };
 		B5925E5929B6C3AA002CBC56 /* AIMEUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AIMEUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		B5925E6A29B6C3C8002CBC56 /* AIMEKeyboard.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = AIMEKeyboard.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		B5925E6C29B6C3C8002CBC56 /* KeyboardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyboardViewController.swift; sourceTree = "<group>"; };
+		B5925E6E29B6C3C8002CBC56 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B5925E7929B6CAB9002CBC56 /* OpenAICompletion.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OpenAICompletion.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -55,6 +84,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B556DB0529B6E2C700B3DD1A /* LDSwiftEventSource in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -72,6 +102,13 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		B5925E6729B6C3C8002CBC56 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -81,6 +118,7 @@
 				B5925E3629B6C3A9002CBC56 /* AIME */,
 				B5925E4C29B6C3AA002CBC56 /* AIMETests */,
 				B5925E5629B6C3AA002CBC56 /* AIMEUITests */,
+				B5925E6B29B6C3C8002CBC56 /* AIMEKeyboard */,
 				B5925E3529B6C3A9002CBC56 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -91,6 +129,7 @@
 				B5925E3429B6C3A9002CBC56 /* AIME.app */,
 				B5925E4929B6C3AA002CBC56 /* AIMETests.xctest */,
 				B5925E5329B6C3AA002CBC56 /* AIMEUITests.xctest */,
+				B5925E6A29B6C3C8002CBC56 /* AIMEKeyboard.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -133,6 +172,16 @@
 			path = AIMEUITests;
 			sourceTree = "<group>";
 		};
+		B5925E6B29B6C3C8002CBC56 /* AIMEKeyboard */ = {
+			isa = PBXGroup;
+			children = (
+				B5925E6C29B6C3C8002CBC56 /* KeyboardViewController.swift */,
+				B5925E6E29B6C3C8002CBC56 /* Info.plist */,
+				B5925E7929B6CAB9002CBC56 /* OpenAICompletion.swift */,
+			);
+			path = AIMEKeyboard;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -143,12 +192,17 @@
 				B5925E3029B6C3A9002CBC56 /* Sources */,
 				B5925E3129B6C3A9002CBC56 /* Frameworks */,
 				B5925E3229B6C3A9002CBC56 /* Resources */,
+				B5925E7529B6C3C8002CBC56 /* Embed Foundation Extensions */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				B5925E7029B6C3C8002CBC56 /* PBXTargetDependency */,
 			);
 			name = AIME;
+			packageProductDependencies = (
+				B556DB0429B6E2C700B3DD1A /* LDSwiftEventSource */,
+			);
 			productName = AIME;
 			productReference = B5925E3429B6C3A9002CBC56 /* AIME.app */;
 			productType = "com.apple.product-type.application";
@@ -189,6 +243,23 @@
 			productReference = B5925E5329B6C3AA002CBC56 /* AIMEUITests.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
 		};
+		B5925E6929B6C3C8002CBC56 /* AIMEKeyboard */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B5925E7229B6C3C8002CBC56 /* Build configuration list for PBXNativeTarget "AIMEKeyboard" */;
+			buildPhases = (
+				B5925E6629B6C3C8002CBC56 /* Sources */,
+				B5925E6729B6C3C8002CBC56 /* Frameworks */,
+				B5925E6829B6C3C8002CBC56 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = AIMEKeyboard;
+			productName = AIMEKeyboard;
+			productReference = B5925E6A29B6C3C8002CBC56 /* AIMEKeyboard.appex */;
+			productType = "com.apple.product-type.app-extension";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -210,6 +281,9 @@
 						CreatedOnToolsVersion = 14.0.1;
 						TestTargetID = B5925E3329B6C3A9002CBC56;
 					};
+					B5925E6929B6C3C8002CBC56 = {
+						CreatedOnToolsVersion = 14.0.1;
+					};
 				};
 			};
 			buildConfigurationList = B5925E2F29B6C3A9002CBC56 /* Build configuration list for PBXProject "AIME" */;
@@ -221,6 +295,9 @@
 				Base,
 			);
 			mainGroup = B5925E2B29B6C3A9002CBC56;
+			packageReferences = (
+				B556DB0329B6E2C700B3DD1A /* XCRemoteSwiftPackageReference "swift-eventsource" */,
+			);
 			productRefGroup = B5925E3529B6C3A9002CBC56 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -228,6 +305,7 @@
 				B5925E3329B6C3A9002CBC56 /* AIME */,
 				B5925E4829B6C3AA002CBC56 /* AIMETests */,
 				B5925E5229B6C3AA002CBC56 /* AIMEUITests */,
+				B5925E6929B6C3C8002CBC56 /* AIMEKeyboard */,
 			);
 		};
 /* End PBXProject section */
@@ -250,6 +328,13 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 		B5925E5129B6C3AA002CBC56 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B5925E6829B6C3C8002CBC56 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -287,6 +372,15 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		B5925E6629B6C3C8002CBC56 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B5925E6D29B6C3C8002CBC56 /* KeyboardViewController.swift in Sources */,
+				B5925E7A29B6CAB9002CBC56 /* OpenAICompletion.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
@@ -299,6 +393,11 @@
 			isa = PBXTargetDependency;
 			target = B5925E3329B6C3A9002CBC56 /* AIME */;
 			targetProxy = B5925E5429B6C3AA002CBC56 /* PBXContainerItemProxy */;
+		};
+		B5925E7029B6C3C8002CBC56 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = B5925E6929B6C3C8002CBC56 /* AIMEKeyboard */;
+			targetProxy = B5925E6F29B6C3C8002CBC56 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -420,6 +519,7 @@
 		B5925E5E29B6C3AB002CBC56 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
@@ -449,6 +549,7 @@
 		B5925E5F29B6C3AB002CBC56 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
@@ -551,6 +652,56 @@
 			};
 			name = Release;
 		};
+		B5925E7329B6C3C8002CBC56 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = SY8Y8N4TPM;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = AIMEKeyboard/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = AIMEKeyboard;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = dev.imgg.AIME.AIMEKeyboard;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		B5925E7429B6C3C8002CBC56 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = SY8Y8N4TPM;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = AIMEKeyboard/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = AIMEKeyboard;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = dev.imgg.AIME.AIMEKeyboard;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -590,7 +741,35 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
+		B5925E7229B6C3C8002CBC56 /* Build configuration list for PBXNativeTarget "AIMEKeyboard" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B5925E7329B6C3C8002CBC56 /* Debug */,
+				B5925E7429B6C3C8002CBC56 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		B556DB0329B6E2C700B3DD1A /* XCRemoteSwiftPackageReference "swift-eventsource" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/LaunchDarkly/swift-eventsource.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 3.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		B556DB0429B6E2C700B3DD1A /* LDSwiftEventSource */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = B556DB0329B6E2C700B3DD1A /* XCRemoteSwiftPackageReference "swift-eventsource" */;
+			productName = LDSwiftEventSource;
+		};
+/* End XCSwiftPackageProductDependency section */
 
 /* Begin XCVersionGroup section */
 		B5925E4229B6C3AA002CBC56 /* AIME.xcdatamodeld */ = {
