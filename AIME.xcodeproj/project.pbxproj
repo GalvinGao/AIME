@@ -7,7 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		B556DB0529B6E2C700B3DD1A /* LDSwiftEventSource in Frameworks */ = {isa = PBXBuildFile; productRef = B556DB0429B6E2C700B3DD1A /* LDSwiftEventSource */; };
+		37422A3529B79C220038AE47 /* ChatGPTSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 37422A3429B79C220038AE47 /* ChatGPTSwift */; };
+		37422A3829B79C360038AE47 /* ChatGPTSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 37422A3729B79C360038AE47 /* ChatGPTSwift */; };
+		37422A3C29B79CCE0038AE47 /* OpenAiModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37422A3B29B79CCE0038AE47 /* OpenAiModel.swift */; };
 		B5925E3829B6C3A9002CBC56 /* AIMEApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5925E3729B6C3A9002CBC56 /* AIMEApp.swift */; };
 		B5925E3A29B6C3A9002CBC56 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5925E3929B6C3A9002CBC56 /* ContentView.swift */; };
 		B5925E3C29B6C3AA002CBC56 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B5925E3B29B6C3AA002CBC56 /* Assets.xcassets */; };
@@ -19,7 +21,6 @@
 		B5925E5A29B6C3AB002CBC56 /* AIMEUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5925E5929B6C3AA002CBC56 /* AIMEUITestsLaunchTests.swift */; };
 		B5925E6D29B6C3C8002CBC56 /* KeyboardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5925E6C29B6C3C8002CBC56 /* KeyboardViewController.swift */; };
 		B5925E7129B6C3C8002CBC56 /* AIMEKeyboard.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = B5925E6A29B6C3C8002CBC56 /* AIMEKeyboard.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
-		B5925E7A29B6CAB9002CBC56 /* OpenAICompletion.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5925E7929B6CAB9002CBC56 /* OpenAICompletion.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -61,6 +62,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		37422A3B29B79CCE0038AE47 /* OpenAiModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OpenAiModel.swift; sourceTree = "<group>"; };
 		B5925E3429B6C3A9002CBC56 /* AIME.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AIME.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B5925E3729B6C3A9002CBC56 /* AIMEApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AIMEApp.swift; sourceTree = "<group>"; };
 		B5925E3929B6C3A9002CBC56 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -76,7 +78,6 @@
 		B5925E6A29B6C3C8002CBC56 /* AIMEKeyboard.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = AIMEKeyboard.appex; sourceTree = BUILT_PRODUCTS_DIR; };
 		B5925E6C29B6C3C8002CBC56 /* KeyboardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyboardViewController.swift; sourceTree = "<group>"; };
 		B5925E6E29B6C3C8002CBC56 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		B5925E7929B6CAB9002CBC56 /* OpenAICompletion.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OpenAICompletion.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -84,7 +85,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B556DB0529B6E2C700B3DD1A /* LDSwiftEventSource in Frameworks */,
+				37422A3529B79C220038AE47 /* ChatGPTSwift in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -106,12 +107,20 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				37422A3829B79C360038AE47 /* ChatGPTSwift in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		37422A3629B79C360038AE47 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		B5925E2B29B6C3A9002CBC56 = {
 			isa = PBXGroup;
 			children = (
@@ -120,6 +129,7 @@
 				B5925E5629B6C3AA002CBC56 /* AIMEUITests */,
 				B5925E6B29B6C3C8002CBC56 /* AIMEKeyboard */,
 				B5925E3529B6C3A9002CBC56 /* Products */,
+				37422A3629B79C360038AE47 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -175,9 +185,9 @@
 		B5925E6B29B6C3C8002CBC56 /* AIMEKeyboard */ = {
 			isa = PBXGroup;
 			children = (
+				37422A3B29B79CCE0038AE47 /* OpenAiModel.swift */,
 				B5925E6C29B6C3C8002CBC56 /* KeyboardViewController.swift */,
 				B5925E6E29B6C3C8002CBC56 /* Info.plist */,
-				B5925E7929B6CAB9002CBC56 /* OpenAICompletion.swift */,
 			);
 			path = AIMEKeyboard;
 			sourceTree = "<group>";
@@ -201,7 +211,7 @@
 			);
 			name = AIME;
 			packageProductDependencies = (
-				B556DB0429B6E2C700B3DD1A /* LDSwiftEventSource */,
+				37422A3429B79C220038AE47 /* ChatGPTSwift */,
 			);
 			productName = AIME;
 			productReference = B5925E3429B6C3A9002CBC56 /* AIME.app */;
@@ -256,6 +266,9 @@
 			dependencies = (
 			);
 			name = AIMEKeyboard;
+			packageProductDependencies = (
+				37422A3729B79C360038AE47 /* ChatGPTSwift */,
+			);
 			productName = AIMEKeyboard;
 			productReference = B5925E6A29B6C3C8002CBC56 /* AIMEKeyboard.appex */;
 			productType = "com.apple.product-type.app-extension";
@@ -296,7 +309,7 @@
 			);
 			mainGroup = B5925E2B29B6C3A9002CBC56;
 			packageReferences = (
-				B556DB0329B6E2C700B3DD1A /* XCRemoteSwiftPackageReference "swift-eventsource" */,
+				37422A3329B79C220038AE47 /* XCRemoteSwiftPackageReference "ChatGPTSwift" */,
 			);
 			productRefGroup = B5925E3529B6C3A9002CBC56 /* Products */;
 			projectDirPath = "";
@@ -377,7 +390,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				B5925E6D29B6C3C8002CBC56 /* KeyboardViewController.swift in Sources */,
-				B5925E7A29B6CAB9002CBC56 /* OpenAICompletion.swift in Sources */,
+				37422A3C29B79CCE0038AE47 /* OpenAiModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -753,21 +766,26 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
-		B556DB0329B6E2C700B3DD1A /* XCRemoteSwiftPackageReference "swift-eventsource" */ = {
+		37422A3329B79C220038AE47 /* XCRemoteSwiftPackageReference "ChatGPTSwift" */ = {
 			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/LaunchDarkly/swift-eventsource.git";
+			repositoryURL = "https://github.com/alfianlosari/ChatGPTSwift.git";
 			requirement = {
-				kind = upToNextMajorVersion;
-				minimumVersion = 3.0.0;
+				branch = main;
+				kind = branch;
 			};
 		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		B556DB0429B6E2C700B3DD1A /* LDSwiftEventSource */ = {
+		37422A3429B79C220038AE47 /* ChatGPTSwift */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = B556DB0329B6E2C700B3DD1A /* XCRemoteSwiftPackageReference "swift-eventsource" */;
-			productName = LDSwiftEventSource;
+			package = 37422A3329B79C220038AE47 /* XCRemoteSwiftPackageReference "ChatGPTSwift" */;
+			productName = ChatGPTSwift;
+		};
+		37422A3729B79C360038AE47 /* ChatGPTSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 37422A3329B79C220038AE47 /* XCRemoteSwiftPackageReference "ChatGPTSwift" */;
+			productName = ChatGPTSwift;
 		};
 /* End XCSwiftPackageProductDependency section */
 

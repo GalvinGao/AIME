@@ -5,6 +5,7 @@
 //  Created by Galvin Gao on 3/6/23.
 //
 
+import ChatGPTSwift
 import UIKit
 
 enum CompletionStatus {
@@ -15,9 +16,9 @@ enum CompletionStatus {
 }
 
 class KeyboardViewController: UIInputViewController {
-
     @IBOutlet var nextKeyboardButton: UIButton!
-    
+    var openAiModel: OpenAiModel = .init(api: ChatGPTAPI(apiKey: "apiKey"))
+
     override func updateViewConstraints() {
         super.updateViewConstraints()
         
@@ -34,7 +35,6 @@ class KeyboardViewController: UIInputViewController {
         return btn
     }()
     
-    
     lazy var btnAbort: UIButton = {
         let btn = UIButton(type: .system)
         btn.layer.cornerRadius = 5
@@ -43,7 +43,6 @@ class KeyboardViewController: UIInputViewController {
         btn.tintColor = .white
         return btn
     }()
-    
     
     lazy var lblStatus: UILabel = {
         let view = UILabel()
@@ -56,15 +55,15 @@ class KeyboardViewController: UIInputViewController {
     
     var status: CompletionStatus = .idle {
         didSet {
-            switch status {
+            switch self.status {
             case .idle:
-                lblStatus.text = "Idle."
+                self.lblStatus.text = "Idle."
             case .running:
-                lblStatus.text = "Running..."
+                self.lblStatus.text = "Running..."
             case .completed:
-                lblStatus.text = "Completed."
+                self.lblStatus.text = "Completed."
             case .aborted:
-                lblStatus.text = "Aborted."
+                self.lblStatus.text = "Aborted."
             }
         }
     }
@@ -73,9 +72,9 @@ class KeyboardViewController: UIInputViewController {
     func onBtnStartPressed(target: UIButton) {
         Task {
             status = .running
-            await OpenAIAPI.create(prompt: textDocumentProxy.documentContextBeforeInput ?? "", streamCallback: { segment in
-                self.textDocumentProxy.insertText(segment ?? "")
-            })
+            await openAiModel.sendText(textDocumentProxy.documentContextBeforeInput ?? "") { segment in
+                self.textDocumentProxy.insertText(segment)
+            }
             status = .completed
         }
     }
@@ -142,5 +141,4 @@ class KeyboardViewController: UIInputViewController {
         }
         self.nextKeyboardButton.setTitleColor(textColor, for: [])
     }
-
 }
